@@ -4,7 +4,6 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   height: 100px;
-  //background: var(--darkGrey);
   padding: 0 20px;
 `;
 
@@ -16,7 +15,6 @@ export const Content = styled.div`
   background: black;
   opacity: 0.9;
   margin: 0 auto;
-  //border-radius: 40px;
   color: var(--white);
 
   img {

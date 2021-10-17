@@ -9,40 +9,40 @@ import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
 // Image
 import NoImage from '../../images/no_image.jpg';
 // Styles
-import { Wrapper, Content, Text } from './MovieInfo.styles';
+import { Wrapper, Content, Text } from './ShowInfo.styles';
 
-const MovieInfo = ({ movie }) => (
-  <Wrapper backdrop={movie.backdrop_path}>
+const ShowInfo = ({ tvShow }) => (
+  <Wrapper backdrop={tvShow.backdrop_path}>
     <Content>
       <Thumb id='movie-thumb'
         image={
-          movie.poster_path
-            ? `${IMAGE_BASE_URL}${POSTER_SIZE}${movie.poster_path}`
+          tvShow.poster_path
+            ? `${IMAGE_BASE_URL}${POSTER_SIZE}${tvShow.poster_path}`
             : NoImage
         }
         clickable={false}
-        alt='movie-thumb'
+        alt='tvShow-thumb'
       />
       <Text>
-        <h1>{movie.title}</h1>
+        <h1>{tvShow.title}</h1>
         <h3>PLOT</h3>
-        <p>{movie.overview}</p>
+        <p>{tvShow.overview}</p>
 
         <div className='rating-directors'>
           <div>
             <h3>RATING</h3>
-            <div className='score'>{movie.vote_average}</div>
+            <div className='score'>{tvShow.vote_average}</div>
           </div>
           <div className='director'>
-            <h3>ACTOR{movie.actors.length > 1 ? 'S' : ''}</h3>
-            {movie.actors.map(director => (
+            <h3>ACTOR{tvShow.actors.length > 1 ? 'S' : ''}</h3>
+            {tvShow.actors.map(director => (
               <text key={director.credit_id}>{director.name + ', '}</text>
             ))}
           </div>  
         </div>
 
         <Grid header='Pictures'>
-        {movie.posters.map(actor => (
+        {tvShow.posters.map(actor => (
           <ShowPicture
             imageUrl={
               actor.file_path
@@ -58,4 +58,4 @@ const MovieInfo = ({ movie }) => (
   </Wrapper>
 );
 
-export default MovieInfo;
+export default ShowInfo;

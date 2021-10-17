@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   * {
+    // Include padding and border in the element's total width and height:
     box-sizing: border-box;
     font-family: 'Abel', sans-serif;  
   }

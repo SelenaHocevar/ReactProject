@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
   height: 850px;
   width: 1600px;
   position: relative;
+  // The browser will interpolate the declarations within our from and to blocks, over the duration specified
   animation: animateHeroImage 1s;
   @keyframes animateHeroImage {
     from {

@@ -34,7 +34,21 @@ export const useHomeFetch = () => {
         var shows = await API.fetchTvShows('',page);
       else
         var shows = await API.fetchTvShows(searchTerm,page);    
-            
+          
+      /* Thanks to the setState() call, React knows the state has changed, 
+         and calls the render() method again to learn what should be on the screen.
+
+         Do Not Modify State Directly
+         For example, this will not re-render a component:
+
+         // Wrong
+         this.state.comment = 'Hello';
+
+         // Correct
+         this.setState({comment: 'Hello'});
+
+         The only place where you can assign this.state is the constructor.
+      */
       setState(prev => ({
         ...shows,
         results:

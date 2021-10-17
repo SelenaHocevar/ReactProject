@@ -10,10 +10,6 @@ const TOPRATED_BASE_URL = `${API_URL}tv/top_rated?api_key=${API_KEY}&language=en
 const AIRINGTODAY_BASE_URL = `${API_URL}tv/airing_today?api_key=${API_KEY}&language=en-US`;
 const TRENDINGDAY_BASE_URL = `${API_URL}trending/tv/day?api_key=${API_KEY}&language=en-US`;
 const TRENDINGWEEK_BASE_URL = `${API_URL}trending/tv/week?api_key=${API_KEY}&language=en-US`;
-// For login and voting
-const REQUEST_TOKEN_URL = `${API_URL}authentication/token/new?api_key=${API_KEY}`;
-const LOGIN_URL = `${API_URL}authentication/token/validate_with_login?api_key=${API_KEY}`;
-const SESSION_ID_URL = `${API_URL}authentication/session/new?api_key=${API_KEY}`;
 
 const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/';
 // Sizes: w300, w780, w1280, original
@@ -33,7 +29,4 @@ export {
   IMAGE_BASE_URL,
   BACKDROP_SIZE,
   POSTER_SIZE,
-  REQUEST_TOKEN_URL,
-  LOGIN_URL,
-  SESSION_ID_URL,
 };

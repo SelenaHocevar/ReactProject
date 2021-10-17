@@ -1,24 +1,24 @@
 import { useState, useEffect } from 'react';
 import API from '../API';
 
-export const useMovieFetch = movieId => {
+export const useShowFetch = showId => {
   const [state, setState] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    const fetchMovie = async () => {
+    const fetchShow = async () => {
       try{
         setLoading(true);
         setError(false);
 
-        const movie = await API.fetchMovie(movieId);
-        const credits = await API.fetchCredits(movieId);
-        const images = await API.fetchImages(movieId);
+        const tvShow = await API.fetchShow(showId);
+        const credits = await API.fetchCredits(showId);
+        const images = await API.fetchImages(showId);
         console.log(images);
 
         setState({
-          ...movie,
+          ...tvShow,
           posters:images.backdrops.slice(5,14),
           actors: credits.cast
         });
@@ -29,8 +29,8 @@ export const useMovieFetch = movieId => {
       }
     };
 
-    fetchMovie();
-  }, [movieId]);
+    fetchShow();
+  }, [showId]);
 
   return { state, loading, error };
 };

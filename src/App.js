@@ -6,18 +6,20 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Components
 import Header from './components/Header';
 import Home from './components/Home';
-import Movie from './components/Movie';
+import TvShow from './components/TvShow';
 import NotFound from './components/NotFound';
+// All React components must act like pure functions with respect to their props.
 
 //Styles
 import {GlobalStyle} from './GlobalStyle';
+
 
 const App = () => (
   <Router>
     <Header/>
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route path='/:movieId' element={<Movie/>}/>
+      <Route path='/:tvShowId' element={<TvShow/>}/>
       <Route path='/*' element={<NotFound/>}/>
     </Routes>
     <GlobalStyle/>

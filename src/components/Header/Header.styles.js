@@ -8,9 +8,8 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   display: flex;
   align-items: center;
+  // items are evenly distributed in the line; first item is on the start line, last item on the end line
   justify-content: space-between;
-  //max-width: var(--maxWidth);
-  //padding: 1px 0;
   margin: 0 auto;
 
   h1 {
@@ -23,14 +22,6 @@ export const Content = styled.div`
 `;
 
 export const LogoImg = styled.img`
-  width: 60px;
-
-  @media screen and (max-width: 500px) {
-    width: 50px;
-  }
-`;
-
-export const TMDBLogoImg = styled.img`
   width: 80px;
 
   @media screen and (max-width: 500px) {

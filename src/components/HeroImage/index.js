@@ -1,11 +1,10 @@
 import React from 'react';
 import {Link} from 'react-scroll'
 import { ScrollButton } from '../ScrollButton/ScrollButton.styles';
-import SearchBar from '../SearchBar';
 
-import { Wrapper, Content, Text, SideBar } from './HeroImage.styles';
+import { Wrapper, Content, Text } from './HeroImage.styles';
 
-const HeroImage = ({image, title, text }) => (
+const HeroImage = ({image}) => (
   <Wrapper image={image}>
     <Content>
       <Text>
