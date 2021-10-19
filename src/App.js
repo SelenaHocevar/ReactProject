@@ -18,7 +18,7 @@ const App = () => (
   <Router>
     <Header/>
     <Routes>
-      <Route path='/' element={<Home />} />
+      <Route path='/ReactProject' element={<Home />} />
       <Route path='/:tvShowId' element={<TvShow/>}/>
       <Route path='/*' element={<NotFound/>}/>
     </Routes>

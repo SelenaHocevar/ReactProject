@@ -8,10 +8,20 @@ import {Wrapper, Content} from './SearchBar.styles';
 let scroll    = Scroll.animateScroll;
 
 const SearchBar = ({ setSearchTerm }) => {
+  /*
+  We call it inside a function component to add some local state to it. 
+  React will preserve this state between re-renders. useState returns a pair: 
+  the current state value and a function that lets you update it.
+  */
   const [state, setState] = useState('');
+
+  /* 
+  useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). 
+  The returned object will persist for the full lifetime of the component. 
+  */
   const initial = useRef(true);
 
-  
+  /* The Effect Hook, useEffect, adds the ability to perform side effects from a function component. */
   useEffect(() => {
     if(initial.current){
       initial.current = false;
